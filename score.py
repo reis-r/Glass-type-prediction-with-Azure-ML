@@ -1,14 +1,14 @@
 import json
 import numpy as np
 import os
-from sklearn.externals import joblib
-
-
+from azureml.core import Model
+import joblib
+import sklearn
 def init():
     global model
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'model.joblib')
+    model_path = Model.get_model_path('glass-prediction') # Renamed the model
+    print("Model path: " + model_path)
     model = joblib.load(model_path)
-
 def run(data):
     try:
         data = np.array(json.loads(data))
