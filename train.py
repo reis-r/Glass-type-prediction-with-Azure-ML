@@ -24,6 +24,9 @@ def clean_data(data):
     
     # Make the target variable the right type
     x_df.Type = x_df.Type.astype('category')
+
+    # Remove the id column
+    x_df.drop("id", inplace=True)
     
     y_df = x_df.pop("Type")
     
