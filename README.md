@@ -142,10 +142,13 @@ print(resp.json())
 The return was `{"result": [1]}`, which indicates glass type 1. Our model is successfully deployed and working.
 
 <a name="screencast"/>
+
 ## Screen Recording
+
 [![Screen recording](https://img.youtube.com/vi/JxBiuQ0oUZ0/0.jpg)](https://www.youtube.com/watch?v=JxBiuQ0oUZ0)
 
 <a name="appinsights"/>
+
 ## Application Insights
 
 The model was deployed with Applications Insights, which enables advanced logging. Application Insights helps identifying errors and fixing them.
