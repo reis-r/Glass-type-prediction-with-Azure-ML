@@ -61,6 +61,7 @@ Pipeline(memory=None,
 The results could probably improve having AutoML run for more time, but for our purposes this is good enough.
 
 ![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_automl.PNG)
+![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/automl_results.PNG)
 
 ## Hyperparameter Tuning
 
@@ -70,7 +71,7 @@ For the hyperparameter tuning we choose scikit-learn's SVC module, the tuned hyp
 The accuracy obtained for the model was 65.11%. The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
 
 ![RunDetails widget for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_hyperdrive.PNG)
-
+![Results for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/hyperdrive-results.PNG)
 ## Model Deployment
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
 
