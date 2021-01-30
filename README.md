@@ -117,6 +117,7 @@ The accuracy obtained for the model was 74.41%. The kernel chosen for the best r
 The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
 
 <a name="deployment"/>
+
 ## Model Deployment
 
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
