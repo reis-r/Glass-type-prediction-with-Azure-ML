@@ -2,6 +2,17 @@
 
 This project aims to create a web service for a model trained using the Azure Machine Learning Python SDK. There will be two models trained, one using scikit-learn's SVC module with hyperparameter tunning and another using Azure AutoML. The model with best accuracy will be then deployed and consumed.
 
+## Table of contents
+[Project Set Up and Installation](#setup)
+[Dataset](#dataset)
+[Automated ML](#automl)
+[Hyperparameter Tuning](#hyperdrive)
+[Model Deployment](#deployment)
+[Screen Recording](#screencast)
+[Application Insights](#appinsights)
+
+
+<a name="setup"/>
 ## Project Set Up and Installation
 
 The project will use an Azure ML Workspace, with the Jupyter notebook environment inside Azure itself. This avoids any extra setup and module instalation.
@@ -11,7 +22,7 @@ There will be 3 main files on the project:
 - A python script for data treatment, as well as the scikit-learn model training (`train.py`)
 
 Care was taken for the data to be treated in the same way in both model training. The other files in the repository were created during the process of running the notebooks.
-
+<a name="dataset"/>
 ## Dataset
 
 ### Overview
@@ -36,6 +47,7 @@ The task will be to predict the type of glass based on the data describing vario
 
 The data will be accessed directly using the web link found in the UCI database, then treated using the train.py.
 
+<a name="automl"/>
 ## Automated ML
 The AutoML training is executed with a timeout of one hour and four concurrent iterations. This allows for resource saving and fast development. It used 3 cross-validations for a good assessment of the results. Deep learning was disabled since the dataset isn't too complex and might not bennefit from it.
 
@@ -79,7 +91,7 @@ Pipeline(memory=None,
 
 The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
 
-
+<a name="hyperdrive"/>
 ## Hyperparameter Tuning
 
 For the hyperparameter tuning we choose scikit-learn's SVC module, the tuned hyperparameters were the kernel type (categorical) and the regularization parameter (a number that goes from 0 to 1).
@@ -94,7 +106,7 @@ The accuracy obtained for the model was 74.41%. The kernel chosen for the best r
 
 The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
 
-
+<a name="deployment"/>
 ## Model Deployment
 
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
@@ -120,9 +132,11 @@ print(resp.json())
 
 The return was `{"result": [1]}`, which indicates glass type 1. Our model is successfully deployed and working.
 
+<a name="screencast"/>
 ## Screen Recording
 [![Screen recording](https://img.youtube.com/vi/JxBiuQ0oUZ0/0.jpg)](https://www.youtube.com/watch?v=JxBiuQ0oUZ0)
 
+<a name="appinsights"/>
 ## Application Insights
 
 The model was deployed with Applications Insights, which enables advanced logging. Application Insights helps identifying errors and fixing them.
