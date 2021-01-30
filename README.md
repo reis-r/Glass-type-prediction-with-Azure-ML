@@ -17,6 +17,20 @@ Care was taken for the data to be treated in the same way in both model training
 ### Overview
 The data used for the training is the [UCI Glass Identification](https://archive.ics.uci.edu/ml/datasets/Glass+Identification) dataset used to predict glass type based on various factors. The ID column was removed, since it does not present relevant information and can lead to wrong results.
 
+The dataset has 214 observations. There are 7 types of glasses in the data description, but none of the observations have the type 4 (Non-float processed vehicle windows). The attributes on the data are:
+
+RI: refractive index
+Na: Sodium
+Mg: Magnesium
+Al: Aluminum
+Si: Silicon
+K: Potassium
+Ca: Calcium
+Ba: Barium
+Fe: Iron
+
+
+
 ### Task
 The task will be to predict the type of glass based on the data describing various characteristics of glass.
 
