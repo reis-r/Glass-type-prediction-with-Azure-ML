@@ -75,6 +75,8 @@ The accuracy obtained for the model was 65.11%. The model probably could improve
 ## Model Deployment
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
 
+![Screenshot of deployed model](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/app-insights-enabled.PNG)
+
 Using the Azure ML Studio we can check the status of our deployed service, as well as get the swagger documentation in a `json` file, see the web address of the endpoint and authorization keys. For consuming the model inside the notebook, we took all this data from the `azureml.core.webservice.aci object` itself and used the `requests` library to execute the call, the code looks like:
 
 ```
