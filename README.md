@@ -75,7 +75,26 @@ The accuracy obtained for the model was 65.11%. The model probably could improve
 ## Model Deployment
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
 
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+Using the Azure ML Studio we can check the status of our deployed service, as well as get the swagger documentation in a `json` file, see the web address of the endpoint and authorization keys. For consuming the model inside the notebook, we took all this data from the `azureml.core.webservice.aci object` itself and used the `requests` library to execute the call, the code looks like:
+
+```
+# Get the primary authorization key
+auth_key = service.get_keys()[0]
+
+# Get the API end point address
+scoring_uri = service.scoring_uri
+
+# Setup request headers
+headers = {'Content-Type': 'application/json'}
+# Set the authorization header
+headers['Authorization'] = f'Bearer {auth_key}'
+
+# Make the request and display the response
+resp = requests.post(scoring_uri, input_data, headers=headers)
+print(resp.json())
+```
+
+The return was `{"result": [1]}`, which indicates glass type 1. Our model is successfully deployed and working.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
