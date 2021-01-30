@@ -56,6 +56,7 @@ The task will be to predict the type of glass based on the data describing vario
 The data will be accessed directly using the web link found in the UCI database, then treated using the train.py.
 
 <a name="automl"/>
+
 ## Automated ML
 The AutoML training is executed with a timeout of one hour and four concurrent iterations. This allows for resource saving and fast development. It used 3 cross-validations for a good assessment of the results. Deep learning was disabled since the dataset isn't too complex and might not bennefit from it.
 
