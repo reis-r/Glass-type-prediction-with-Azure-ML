@@ -20,6 +20,7 @@ This project aims to create a web service for a model trained using the Azure Ma
 
 
 <a name="setup"/>
+
 ## Project Set Up and Installation
 
 The project will use an Azure ML Workspace, with the Jupyter notebook environment inside Azure itself. This avoids any extra setup and module instalation.
