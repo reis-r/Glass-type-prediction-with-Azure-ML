@@ -101,7 +101,7 @@ The return was `{"result": [1]}`, which indicates glass type 1. Our model is suc
 ## Screen Recording
 [![Screen recording](https://img.youtube.com/vi/JxBiuQ0oUZ0/0.jpg)](https://www.youtube.com/watch?v=JxBiuQ0oUZ0)
 
-## Standout Suggestions
+## Application Insights
 
 The model was deployed with Applications Insights, which enables advanced logging. Application Insights helps identifying errors and fixing them.
 
