@@ -4,19 +4,19 @@ This project aims to create a web service for a model trained using the Azure Ma
 
 ## Table of contents
 
-[Project Set Up and Installation](#setup)
+- [Project Set Up and Installation](#setup)
 
-[Dataset](#dataset)
+- [Dataset](#dataset)
 
-[Automated ML](#automl)
+- [Automated ML](#automl)
 
-[Hyperparameter Tuning](#hyperdrive)
+- [Hyperparameter Tuning](#hyperdrive)
 
-[Model Deployment](#deployment)
+- [Model Deployment](#deployment)
 
-[Screen Recording](#screencast)
+- [Screen Recording](#screencast)
 
-[Application Insights](#appinsights)
+- [Application Insights](#appinsights)
 
 
 <a name="setup"/>
