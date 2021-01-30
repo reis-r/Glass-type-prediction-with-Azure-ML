@@ -3,12 +3,19 @@
 This project aims to create a web service for a model trained using the Azure Machine Learning Python SDK. There will be two models trained, one using scikit-learn's SVC module with hyperparameter tunning and another using Azure AutoML. The model with best accuracy will be then deployed and consumed.
 
 ## Table of contents
+
 [Project Set Up and Installation](#setup)
+
 [Dataset](#dataset)
+
 [Automated ML](#automl)
+
 [Hyperparameter Tuning](#hyperdrive)
+
 [Model Deployment](#deployment)
+
 [Screen Recording](#screencast)
+
 [Application Insights](#appinsights)
 
 
