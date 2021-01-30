@@ -29,7 +29,7 @@ Ca: Calcium
 Ba: Barium
 Fe: Iron
 
-
+The data is loaded to Azure using the `TabularDatasetFactory.from_delimited_files()` method. For the Automated ML run specifically, we have loaded the data as a Tabular dataset, treated it using the `clean_data()` function inside `train.py`, then exported it as CSV and registered it as an Azure dataset. This was done to make sure the data would be treated in the same way in both AutoML and Hyperdrive. It's not possible to create an AutoML remote job from an in-memory Pandas dataframe (which is the data type `clean_data()` returns.
 
 ### Task
 The task will be to predict the type of glass based on the data describing various characteristics of glass.
