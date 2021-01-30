@@ -75,7 +75,7 @@ The accuracy obtained for the model was 65.11%. The model probably could improve
 ## Model Deployment
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
 
-![Screenshot of deployed model](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/app-insights-enabled.PNG)
+
 
 Using the Azure ML Studio we can check the status of our deployed service, as well as get the swagger documentation in a `json` file, see the web address of the endpoint and authorization keys. For consuming the model inside the notebook, we took all this data from the `azureml.core.webservice.aci object` itself and used the `requests` library to execute the call, the code looks like:
 
@@ -99,10 +99,10 @@ print(resp.json())
 The return was `{"result": [1]}`, which indicates glass type 1. Our model is successfully deployed and working.
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+[![Screen recording](https://img.youtube.com/vi/JxBiuQ0oUZ0/0.jpg)](https://www.youtube.com/watch?v=JxBiuQ0oUZ0)
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+The model was deployed with Applications Insights, which enables advanced logging. Application Insights helps identifying errors and fixing them.
+
+![Screenshot of deployed model](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/app-insights-enabled.PNG)
