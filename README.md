@@ -100,6 +100,7 @@ Pipeline(memory=None,
 The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
 
 <a name="hyperdrive"/>
+
 ## Hyperparameter Tuning
 
 For the hyperparameter tuning we choose scikit-learn's SVC module, the tuned hyperparameters were the kernel type (categorical) and the regularization parameter (a number that goes from 0 to 1).
