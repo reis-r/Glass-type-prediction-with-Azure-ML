@@ -72,24 +72,32 @@ Pipeline(memory=None,
          verbose=False)
 ```
 
-The results could probably improve having AutoML run for more time, but for our purposes this is good enough.
-
 ![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_automl.PNG)
 ![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/automl_results.PNG)
+
+#### Future tests that might improve results 
+
+The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
+
 
 ## Hyperparameter Tuning
 
 For the hyperparameter tuning we choose scikit-learn's SVC module, the tuned hyperparameters were the kernel type (categorical) and the regularization parameter (a number that goes from 0 to 1).
 
 ### Results
-The accuracy obtained for the model was 65.11%. The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
+The accuracy obtained for the model was 74.41%. The kernel chosen for the best run was `poly` and the regularization parameter for this run was set to `0.46861046214781454`.
 
 ![RunDetails widget for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_hyperdrive.PNG)
 ![Results for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/hyperdrive-results.PNG)
+
+#### Future tests that might improve results 
+
+The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
+
+
 ## Model Deployment
+
 The deployed model was the AutoML model, which obtained better accuracy. The model was deployed to an Azure Container Instance (ACI). The ACI provides a fast deployment ideal for development situations. The deployment was made using authentication and with Application Insights enabled.
-
-
 
 Using the Azure ML Studio we can check the status of our deployed service, as well as get the swagger documentation in a `json` file, see the web address of the endpoint and authorization keys. For consuming the model inside the notebook, we took all this data from the `azureml.core.webservice.aci object` itself and used the `requests` library to execute the call, the code looks like:
 
