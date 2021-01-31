@@ -18,7 +18,7 @@ This project aims to create a web service for a model trained using the Azure Ma
 
 - [Application Insights](#appinsights)
 
-- [Future Improvements](#improvement)
+- [Future Improvements](#improvements)
 
 
 <a name="setup"/>
