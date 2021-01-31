@@ -160,5 +160,6 @@ The model was deployed with Applications Insights, which enables advanced loggin
 
 For each of the models, there are some experiments that could improve performance:
 
-- The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
-- The Hyperdrive run model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
+- The results of the Automated ML run could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
+
+- The Hyperdrive run model may be better using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
