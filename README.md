@@ -18,6 +18,8 @@ This project aims to create a web service for a model trained using the Azure Ma
 
 - [Application Insights](#appinsights)
 
+- [Future Improvements](#improvement)
+
 
 <a name="setup"/>
 
@@ -96,9 +98,6 @@ Pipeline(memory=None,
 ![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_automl.PNG)
 ![RunDetails widget for the AutoML experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/automl_results.PNG)
 
-#### Future tests that might improve results 
-
-The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
 
 <a name="hyperdrive"/>
 
@@ -112,9 +111,7 @@ The accuracy obtained for the model was 74.41%. The kernel chosen for the best r
 ![RunDetails widget for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/RunDetails_hyperdrive.PNG)
 ![Results for the Hyperdrive experiment](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/hyperdrive-results.PNG)
 
-#### Future tests that might improve results 
 
-The model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
 
 <a name="deployment"/>
 
@@ -156,3 +153,12 @@ The return was `{"result": [1]}`, which indicates glass type 1. Our model is suc
 The model was deployed with Applications Insights, which enables advanced logging. Application Insights helps identifying errors and fixing them.
 
 ![Screenshot of deployed model](https://raw.githubusercontent.com/reis-r/nd00333-capstone/master/screenshots/app-insights-enabled.PNG)
+
+<a name="improvements"/>
+
+## Future Improvements
+
+For each of the models, there are some experiments that could improve performance:
+
+- The results could probably improve having AutoML run for more time, but for our purposes this is good enough. Deep learning, besides being more resource-intensive, also could get better results.
+- The Hyperdrive run model probably could improved using Grid sampling instead of Random sampling, but that would take longer (and more computing power) to train.
